@@ -7,11 +7,16 @@
     "footer":"Siteasy - Make static site generation life easy",
     "add_date": false,
     "cates":{
-            "News": {}, "Docs":{}, "Themes":{}, "Community":{}, 
+            "News": {}, 
+            "Docs":{
+                "order": ["quick start","structure","config","theme development","plugin development"]
+            }, 
+            "Themes":{}, 
+            "Community":{}, 
             "github":{"url":"https://siteasy.github.io"}
     },
     "plugins":{
-            "all_cates":["list"],
+            "all_cates":["article_list"],
             "index":["Jumbotron"]
     }
 }
