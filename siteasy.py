@@ -77,17 +77,17 @@ def get_md_content(md_path):
         head_dict = json.loads(head)
         date = head_dict['date']
         content = s.replace(head,'')
-        if global_config['add_data']:
+        if global_config['add_date']:
             content += "\n %s"%date
         title = head_dict['title']
     else:
         date = time.ctime(os.stat(md_path).st_ctime)
         m = re.search(r'#(.+)',s)
         if m:
-            titile = re.search(r'#(.+)',s).group(1)
+            title = re.search(r'#(.+)',s).group(1)
         else:
             title = ""
-        if global_config['add_data']:
+        if global_config['add_date']:
             content = s + "\n %s"%date
         else:
             content = s
