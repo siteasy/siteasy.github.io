@@ -1,4 +1,9 @@
-# Config.json
+{
+    "date":"2017-08-24",
+    "title": "Siteasy config.json document"
+}
+# config.json
+
 There is a config file under the root directory. It is the global setting of the site.
 ## articles_path
 Pointer to the folder where you put the article(md) files.  
@@ -77,7 +82,7 @@ Description:
   - If there is no index.md under the category of articles, the list.html which list all articles of the category will be put as the homepage of category.
 - If the value contains the key "url", that means the category is a external link.
 
-# plugins
+## plugins
 The plugins used for the website.
 demo:
 ```json

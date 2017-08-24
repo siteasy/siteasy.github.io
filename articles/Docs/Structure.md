@@ -1,3 +1,7 @@
+{
+    "date":"2017-08-24",
+    "title": "Siteasy structure document"
+}
 # Structure
 
 The basic structure of the siteasy looks like this
