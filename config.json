@@ -16,7 +16,7 @@
             "github":{"url":"https://siteasy.github.io"}
     },
     "plugins":{
-            "all_cates":["article_list"],
-            "index":["Jumbotron"]
+            "all_cates":["cate_list"],
+            "index":["Jumbotron","all_list"]
     }
 }

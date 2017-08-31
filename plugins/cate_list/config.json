@@ -1,6 +1,6 @@
 {
     "sider":{
-        "tpl":"sider.html",
+        "tpl":"list.html",
         "context":{}
     }
 }

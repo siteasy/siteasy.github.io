@@ -66,13 +66,15 @@ The configuration of headers.
 demo:
 ```json
 {
-    "cates": {
-        "News": {}, 
-        "Docs":{}, 
-        "Themes":{}, 
-        "Community":{}, 
-        "github":{"url":"https://siteasy.github.io"}
-    }
+    "cates":{
+            "News": {}, 
+            "Docs":{
+                "order": ["quick start","structure","config","theme development","plugin development"]
+            }, 
+            "Themes":{}, 
+            "Community":{}, 
+            "github":{"url":"https://siteasy.github.io"}
+    },
 }
 ```
 Description:
@@ -81,6 +83,7 @@ Description:
   - If there is a index.md under the category of articles, the index.html which generated from index.md will be put as the homepage of the category.
   - If there is no index.md under the category of articles, the list.html which list all articles of the category will be put as the homepage of category.
 - If the value contains the key "url", that means the category is a external link.
+- The value "order" of category control the order of articles under the category. The article list on the sider bar is shown by the plugin "articel_list"
 
 ## plugins
 The plugins used for the website.
@@ -88,7 +91,7 @@ demo:
 ```json
 {
     plugins: {
-        "all_cates":["list"],
+        "all_cates":["article_list"],
         "index":["Jumbotron"]
     }
 }
