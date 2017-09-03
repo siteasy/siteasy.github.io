@@ -17,6 +17,6 @@
     },
     "plugins":{
             "all_cates":["cate_list"],
-            "index":["Jumbotron","all_list"]
+            "index":[]
     }
 }
