@@ -13,7 +13,7 @@
             }, 
             "Themes":{}, 
             "Community":{"url":"https://gitq.com/siteasy/siteasy"}, 
-            "github":{"url":"https://siteasy.github.io"}
+            "github":{"url":"https://github.com/siteasy/siteasy.github.io"}
     },
     "plugins":{
             "all_cates":["cate_list"],
