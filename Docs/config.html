@@ -33,7 +33,7 @@
         
             <li><a href="/Themes/list.html">Themes</a></li>
         
-            <li><a href="/Community/list.html">Community</a></li>
+            <li><a href="https://gitq.com/siteasy/siteasy">Community</a></li>
         
             <li><a href="https://siteasy.github.io">github</a></li>
         
@@ -61,7 +61,7 @@ demo:
 ```
 
 ## theme
-Which theme you used.  
+Which theme you used. You can put serveral themes under theme folder and use this to choose.
 demo:
 ```json
 {&#34;theme&#34;:&#34;default&#34;}
@@ -103,7 +103,9 @@ demo:
 ```
 
 ## add_date
-Whether to add crated datetime to the article. Todo.
+Whether to add crated datetime to the article.   
+&gt; The index.md won&#39;t add date because usually the index page show the page which don&#39;t need date  
+
 demo:
 ```json
 {&#34;add_date&#34;: false}
@@ -149,7 +151,9 @@ description:
 - If the key is &#34;all_cates&#34;, all pages are selected to apply the plugins
 - If the key is &#34;index&#34;, only the index of the website is selected to apply the plugins
 - If the key is one of the categories, only the pages of the category are selected to apply the plugins.
-</div>
+
+---
+ 2017-08-24 00:00:00</div>
 
         
               </div>
@@ -193,7 +197,7 @@ description:
                   //    return hljs.highlightAuto(code).value;
                   //},
                 });
-                document.getElementById('md_content').innerHTML = marked(document.getElementById('md').innerHTML);
+                document.getElementById('md_content').innerHTML = marked(document.getElementById('md').innerText);
             </script>
     </body>
 </html>

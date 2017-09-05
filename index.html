@@ -33,7 +33,7 @@
         
             <li><a href="/Themes/list.html">Themes</a></li>
         
-            <li><a href="/Community/list.html">Community</a></li>
+            <li><a href="https://gitq.com/siteasy/siteasy">Community</a></li>
         
             <li><a href="https://siteasy.github.io">github</a></li>
         
@@ -45,19 +45,16 @@
         
                 
     
-    <ul>
         
-            <li><a href="/Docs/Quick start.html">Quick start</a></li>
+            <div class="jumbotron">
+      <h1>Siteasy</h1>
+      <p>Simplest site generator</p>
+      <p><a class="btn btn-primary btn-md" href="/Docs/Quick start.html" role="button">Quick start</a></p>
+    </div>
         
-            <li><a href="/Docs/config.html">config</a></li>
-        
-            <li><a href="/Docs/Structure.html">Structure</a></li>
-        
-            <li><a href="/Docs/Theme development.html">Theme development</a></li>
-        
-            <li><a href="/Docs/Plugin development.html">Plugin development</a></li>
-        
-    </ul>
+    
+    <div id="md_content"></div>
+    <div id="md" style="display:None;"></div>
 
         
     </div>
@@ -79,7 +76,7 @@
                   //    return hljs.highlightAuto(code).value;
                   //},
                 });
-                document.getElementById('md_content').innerHTML = marked(document.getElementById('md').innerHTML);
+                document.getElementById('md_content').innerHTML = marked(document.getElementById('md').innerText);
             </script>
     </body>
 </html>

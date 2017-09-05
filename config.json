@@ -5,18 +5,18 @@
     "logo":"Siteasy",
     "output":"",
     "footer":"Siteasy - Make static site generation life easy",
-    "add_date": false,
+    "add_date": true,
     "cates":{
             "News": {}, 
             "Docs":{
                 "order": ["quick start","structure","config","theme development","plugin development"]
             }, 
             "Themes":{}, 
-            "Community":{}, 
+            "Community":{"url":"https://gitq.com/siteasy/siteasy"}, 
             "github":{"url":"https://siteasy.github.io"}
     },
     "plugins":{
             "all_cates":["cate_list"],
-            "index":[]
+            "index":["Jumbotron"]
     }
 }
