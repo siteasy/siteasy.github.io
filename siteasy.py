@@ -59,7 +59,7 @@ class HeaderView:
         self.cateviews.append(cateview)
 
     def get_cates_link(self):
-        return [{'url':cateview.url,'text':cateview.text} for cateview in self.cateviews]
+        return [{'url':cateview.url,'text':cateview.text,'selected':False, 'children': cateview.get_links()} for cateview in self.cateviews]
 
     def update_extra_context(self,extra_context):
         for cateview in self.cateviews:
@@ -117,11 +117,12 @@ class Site:
             else:
                 os.mkdir(os.path.join(global_config['output'],cate))
                 cateview.set_url()
+            cateview.apply_config(global_config['cates'][cate])
             self.header.add_cate(cateview)
 
     def gen_index(self):
         mainview_list = sorted(MainView.instances, key=lambda k : k.date)
-        article_list = [{'url':'/'+view.cateview.text+'/'+view.text+'.html','text':view.text,'short_md_content':view.short_md_content} for view in mainview_list]
+        article_list = [{'url':'/'+view.parent.text+'/'+view.text+'.html','text':view.text,'short_md_content':view.short_md_content} for view in mainview_list]
         index_context = {'articles':article_list}
         index_context.update(global_config['index'])
         #print(index_context)

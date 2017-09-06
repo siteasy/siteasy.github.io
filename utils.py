@@ -46,3 +46,7 @@ def get_md_content(md_path):
     f.close()
     return content,short_content,title,date
 
+def select_link_one_layer(site_map,id):
+    for k,v in site_map.items():
+        pass
+

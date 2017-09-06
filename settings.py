@@ -11,6 +11,7 @@ PLUGINS_PATH = 'plugins'
 #get global_config from config.json
 f = open('config.json')
 global_config = json.loads(f.read(),object_pairs_hook=OrderedDict)
+global_context = {k:global_config[k] for k in ['logo','footer']}
 f.close()
 
 env = Environment(
