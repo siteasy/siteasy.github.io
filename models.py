@@ -38,6 +38,7 @@ class BaseView:
         self.md_content = ''
         self.short_md_content = ''
         self.config = {}
+        self.link_to = ''
 
     def __repr__(self):
         return self.classname + ':' + self.text
@@ -125,6 +126,9 @@ class BaseView:
         self.site_map = {'id':self.id, 'text':self.text,'url':self.url,'selected':False,'is_cate':self.is_cate}
         if self.ext_url:
             self.site_map.update({'url':self.ext_url})
+        elif self.link_to:
+            view = self.get_child_by_text(self.link_to)
+            self.site_map.update({'url':view.url})
         sub_site_map = []
         for child in self.children:
             sub_site_map.append(child.gen_site_map())
@@ -154,10 +158,19 @@ class BaseView:
                 return view 
         raise Exception("Instance %s not found"%text)
 
+    def get_child_by_text(self,text):
+        for view in self.children:
+            if view.text.lower() == text.lower():
+                return view 
+        raise Exception("Instance %s not found"%text)
+
+
     def apply_config(self,cate_config):
         self.config = cate_config
         if 'order' in cate_config.keys():
             self.order = cate_config['order']
+        if 'link_to' in cate_config.keys():
+            self.link_to = cate_config['link_to']
 
     def set_md_file(self,md_file):
         self.md_file = md_file

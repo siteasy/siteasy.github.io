@@ -6,5 +6,6 @@
 ~~- Add css/js static copy ~~
 - ~~Can select article as homepage of category~~ no need, user need to set it as index.md
 - ~~Support nest directories under articles~~
+- ~~Support assign link to cate~~
 - Add multi-language support
 

@@ -9,6 +9,7 @@
     "cates":{
             "News": {}, 
             "Docs":{
+                "link_to":"quick start",
                 "order": [
                     "quick start.md",
                     "structure.md",
