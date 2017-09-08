@@ -9,7 +9,14 @@
     "cates":{
             "News": {}, 
             "Docs":{
-                "order": ["quick start","structure","config","theme development","plugin development"]
+                "order": [
+                    "quick start.md",
+                    "structure.md",
+                    "config.md",
+                    "theme development",
+                    "plugin development",
+                    "contribute"
+                ]
             }, 
             "Themes":{}, 
             "Community":{"url":"https://gitq.com/siteasy/siteasy"}, 

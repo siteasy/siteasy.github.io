@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Siteasy config.json document</title>
+        <title>Contribute to siteasy</title>
         <script src="https://cdn.bootcss.com/marked/0.3.6/marked.min.js"></script>
         <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
         <link href="https://cdn.bootcss.com/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet">
@@ -48,110 +48,30 @@
             <div class="row">
               <div class="col-xs-12 col-sm-6 col-md-8">
                 <div class="md_content" data="
-# config.json
+# Function description
+The base function of siteasy is to generate a context and use it to render the static html files with theme.
 
-There is a config file under the root directory. It is the global setting of the site.
-## articles_path
-Pointer to the folder where you put the article(md) files.  
-demo:
+The context need to include,
+- logo 
 ```json
-{&#34;articles_path&#34;:&#34;articles&#34;}
+    {&#34;logo&#34;:text}
+```
+- header 
+```json
+    {&#34;header&#34;:[{&#34;text&#34;:cate_text, &#34;url&#34;:cate_url},{&#34;text&#34;:cate_text, &#34;url&#34;:cate_url}...]}
+```
+- site_map
+```json
+    {&#34;site_map&#34;: [{&#34;id&#34;:cate_id, &#34;text&#34;:cate_text, &#34;url&#34;:cate_url, &#34;selected&#34;:true/false, &#34;sub&#34;: sub_site_map}]}
+```
+- md_content
+```json
+    {&#34;md_content&#34;:md_content}
 ```
 
-## theme
-Which theme you used. You can put serveral themes under theme folder and use this to choose.
-demo:
-```json
-{&#34;theme&#34;:&#34;default&#34;}
-```
-
-## index
-The context of index.  
-demo:
-```json
-{&#34;index&#34;:&#34;&#34;}
-```
-
-## logo
-The logo (brand) of the header.  
-demo:
-```json
-{&#34;logo&#34;:&#34;siteasy&#34;}
-```
-
-## output
-Which folder to generate the static web site. 
-demo:
-```json
-{&#34;output&#34;:&#34;&#34;}
-```
-will generate the site to the root directory.  
-
-The setting
-```json
-{&#34;output&#34;:&#34;output&#34;}
-```
-will make a folder &#34;output&#34; under root directory and generate the site to this &#34;output&#34; folder.  
-
-## footer
-The context of footer.  
-demo:
-```json
-{&#34;footer&#34;:&#34;Siteasy - Make static site generation life easy&#34;}
-```
-
-## add_date
-Whether to add crated datetime to the article.   
-&gt; The index.md won&#39;t add date because usually the index page show the page which don&#39;t need date  
-
-demo:
-```json
-{&#34;add_date&#34;: false}
-```
-
-## cates
-The configuration of headers.  
-demo:
-```json
-{
-    &#34;cates&#34;:{
-            &#34;News&#34;: {}, 
-            &#34;Docs&#34;:{
-                &#34;order&#34;: [&#34;quick start&#34;,&#34;structure&#34;,&#34;config&#34;,&#34;theme development&#34;,&#34;plugin development&#34;]
-            }, 
-            &#34;Themes&#34;:{}, 
-            &#34;Community&#34;:{}, 
-            &#34;github&#34;:{&#34;url&#34;:&#34;https://siteasy.github.io&#34;}
-    },
-}
-```
-Description:
-- The keys is the text of the categories.
-- If the value of the category is empty, then
-  - If there is a index.md under the category of articles, the index.html which generated from index.md will be put as the homepage of the category.
-  - If there is no index.md under the category of articles, the list.html which list all articles of the category will be put as the homepage of category.
-- If the value contains the key &#34;url&#34;, that means the category is a external link.
-- The value &#34;order&#34; of category control the order of articles under the category. The article list on the sider bar is shown by the plugin &#34;articel_list&#34;
-
-## plugins
-The plugins used for the website.
-demo:
-```json
-{
-    plugins: {
-        &#34;all_cates&#34;:[&#34;article_list&#34;],
-        &#34;index&#34;:[&#34;Jumbotron&#34;]
-    }
-}
-```
-description:
-- the keys describe which page is selected to apply the plugins
-- If the key is &#34;all_cates&#34;, all pages are selected to apply the plugins
-- If the key is &#34;index&#34;, only the index of the website is selected to apply the plugins
-- If the key is one of the categories, only the pages of the category are selected to apply the plugins.
 
 ---
- 2017-08-24 00:00:00"></div>
+ 2017-09-05 00:00:00"></div>
               </div>
               <div class="col-xs-6 col-md-4">
                 
