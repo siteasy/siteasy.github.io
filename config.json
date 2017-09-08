@@ -3,7 +3,7 @@
     "theme":"default",
     "index":{},
     "logo":"Siteasy",
-    "output":"",
+    "output":".",
     "footer":"Siteasy - Make static site generation life easy",
     "add_date": true,
     "cates":{

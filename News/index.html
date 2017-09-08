@@ -27,30 +27,28 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
         
-            <li><a href="/News/list.html">News</a></li>
+            <li><a href="/News">News</a></li>
         
-            <li><a href="/Docs/index.html">Docs</a></li>
+            <li><a href="/Docs">Docs</a></li>
         
-            <li><a href="/Themes/list.html">Themes</a></li>
+            <li><a href="/Themes">Themes</a></li>
         
-            <li><a href="/Community/list.html">Community</a></li>
+            <li><a href="https://gitq.com/siteasy/siteasy">Community</a></li>
         
-            <li><a href="https://siteasy.github.io">github</a></li>
+            <li><a href="https://github.com/siteasy/siteasy">github</a></li>
         
         </ul>
     </div>
   </div>
 </nav>        
     <div class="container" style="min-height:1200px;">
-        
                 
+    
+    <div class="md_content" data=""></div>
     <ul>
-        
-            There is no articles so far.
         
     </ul>
 
-        
     </div>
     <div style="margin-top:50px;">
     <div class="Container">Siteasy - Make static site generation life easy</div>
@@ -70,7 +68,10 @@
                   //    return hljs.highlightAuto(code).value;
                   //},
                 });
-                document.getElementById('md_content').innerHTML = marked(document.getElementById('md').innerHTML);
+                items = document.getElementsByClassName('md_content')
+                for(i=0;i<items.length;i++){
+                    items[i].innerHTML = marked(items[i].getAttribute('data'));         
+                }
             </script>
     </body>
 </html>

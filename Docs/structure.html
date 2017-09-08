@@ -27,11 +27,11 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
         
-            <li><a href="/News/list.html">News</a></li>
+            <li><a href="/News">News</a></li>
         
-            <li><a href="/Docs/list.html">Docs</a></li>
+            <li><a href="/Docs">Docs</a></li>
         
-            <li><a href="/Themes/list.html">Themes</a></li>
+            <li><a href="/Themes">Themes</a></li>
         
             <li><a href="https://gitq.com/siteasy/siteasy">Community</a></li>
         
@@ -47,9 +47,7 @@
         
             <div class="row">
               <div class="col-xs-12 col-sm-6 col-md-8">
-        
-                <div id="md_content"></div>
-                <div id="md" style="display:None;">
+                <div class="md_content" data="
 # Structure
 
 The basic structure of the siteasy looks like this
@@ -93,25 +91,28 @@ Notes:
 
 
 ---
- 2017-08-24 00:00:00</div>
-        
+ 2017-08-24 00:00:00"></div>
               </div>
               <div class="col-xs-6 col-md-4">
                 
     
     <ul class="list-group">
   
-    <li><a href="/Docs/Quick start.html">Quick start</a></li>
+</ul>
+    
+
+    
+    <ul class="list-group">
   
-    <li><a href="/Docs/Structure.html">Structure</a></li>
+    <li><a href="/Docs/quick start.html">quick start</a></li>
+  
+    <li><a href="/Docs/structure.html">structure</a></li>
   
     <li><a href="/Docs/config.html">config</a></li>
   
-    <li><a href="/Docs/Theme development.html">Theme development</a></li>
+    <li><a href="/Docs/theme development.html">theme development</a></li>
   
-    <li><a href="/Docs/Plugin development.html">Plugin development</a></li>
-  
-    <li><a href="/Docs/Contribute.html">Contribute</a></li>
+    <li><a href="/Docs/plugin development.html">plugin development</a></li>
   
 </ul>
     
@@ -139,7 +140,10 @@ Notes:
                   //    return hljs.highlightAuto(code).value;
                   //},
                 });
-                document.getElementById('md_content').innerHTML = marked(document.getElementById('md').innerText);
+                items = document.getElementsByClassName('md_content')
+                for(i=0;i<items.length;i++){
+                    items[i].innerHTML = marked(items[i].getAttribute('data'));         
+                }
             </script>
     </body>
 </html>

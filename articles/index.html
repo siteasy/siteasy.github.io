@@ -27,30 +27,19 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
         
-            <li><a href="/News/list.html">News</a></li>
-        
-            <li><a href="/Docs/index.html">Docs</a></li>
-        
-            <li><a href="/Themes/list.html">Themes</a></li>
-        
-            <li><a href="/Community/list.html">Community</a></li>
-        
-            <li><a href="https://siteasy.github.io">github</a></li>
-        
         </ul>
     </div>
   </div>
 </nav>        
     <div class="container" style="min-height:1200px;">
-        
                 
+    
+    <div id="md_content"></div>
+    <div id="md" style="display:None;"></div>
     <ul>
-        
-            There is no articles so far.
         
     </ul>
 
-        
     </div>
     <div style="margin-top:50px;">
     <div class="Container">Siteasy - Make static site generation life easy</div>
@@ -70,7 +59,7 @@
                   //    return hljs.highlightAuto(code).value;
                   //},
                 });
-                document.getElementById('md_content').innerHTML = marked(document.getElementById('md').innerHTML);
+                document.getElementById('md_content').innerHTML = marked(document.getElementById('md').innerText);
             </script>
     </body>
 </html>

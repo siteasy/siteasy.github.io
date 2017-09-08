@@ -27,11 +27,11 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
         
-            <li><a href="/News/list.html">News</a></li>
+            <li><a href="/News">News</a></li>
         
-            <li><a href="/Docs/list.html">Docs</a></li>
+            <li><a href="/Docs">Docs</a></li>
         
-            <li><a href="/Themes/list.html">Themes</a></li>
+            <li><a href="/Themes">Themes</a></li>
         
             <li><a href="https://gitq.com/siteasy/siteasy">Community</a></li>
         
@@ -52,8 +52,10 @@
     </div>
         
     
-    <div id="md_content"></div>
-    <div id="md" style="display:None;"></div>
+    <div class="md_content" data=""></div>
+    <ul>
+        
+    </ul>
 
     </div>
     <div style="margin-top:50px;">
@@ -74,7 +76,10 @@
                   //    return hljs.highlightAuto(code).value;
                   //},
                 });
-                document.getElementById('md_content').innerHTML = marked(document.getElementById('md').innerText);
+                items = document.getElementsByClassName('md_content')
+                for(i=0;i<items.length;i++){
+                    items[i].innerHTML = marked(items[i].getAttribute('data'));         
+                }
             </script>
     </body>
 </html>
