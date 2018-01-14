@@ -1,4 +1,4 @@
-from utils import get_md_content,render,loadjson
+from utils import get_md_content,render,loadjson,renderMD
 from settings import global_config
 import os
 from settings import logging
@@ -66,7 +66,7 @@ class BaseView:
         self.update_plugin_context()
         logging.debug("gen_html cate=%s from md file=%s with tpl=%s and context=\n%s\n"%(self.cateview.text,self.md_file,self.tpl,json.dumps(self.context,indent=4,sort_keys=True)))
         #gen_html(self.tpl,self.md_content,self.context,os.path.join(self.cateview.text,self.out))
-        self.context.update({'md_content':self.md_content,'short_md_content':self.short_md_content})
+        self.context.update({'md_content':renderMD(self.md_content),'short_md_content':renderMD(self.short_md_content)})
         self.context.update(global_config)
         s = render(self.tpl,self.context)
         #print(context_dict)

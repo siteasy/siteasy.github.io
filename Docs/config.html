@@ -49,107 +49,92 @@
                 
     
     <div id="md_content"></div>
-    <div id="md" style="display:None;">
-# config.json
-
-There is a config file under the root directory. It is the global setting of the site.
-## articles_path
-Pointer to the folder where you put the article(md) files.  
-demo:
-```json
-{&#34;articles_path&#34;:&#34;articles&#34;}
-```
-
-## theme
-Which theme you used.  
-demo:
-```json
-{&#34;theme&#34;:&#34;default&#34;}
-```
-
-## index
-The context of index.  
-demo:
-```json
-{&#34;index&#34;:&#34;&#34;}
-```
-
-## logo
-The logo (brand) of the header.  
-demo:
-```json
-{&#34;logo&#34;:&#34;siteasy&#34;}
-```
-
-## output
-Which folder to generate the static web site. 
-demo:
-```json
-{&#34;output&#34;:&#34;&#34;}
-```
-will generate the site to the root directory.  
-
-The setting
-```json
-{&#34;output&#34;:&#34;output&#34;}
-```
-will make a folder &#34;output&#34; under root directory and generate the site to this &#34;output&#34; folder.  
-
-## footer
-The context of footer.  
-demo:
-```json
-{&#34;footer&#34;:&#34;Siteasy - Make static site generation life easy&#34;}
-```
-
-## add_date
-Whether to add crated datetime to the article. Todo.
-demo:
-```json
-{&#34;add_date&#34;: false}
-```
-
-## cates
-The configuration of headers.  
-demo:
-```json
-{
-    &#34;cates&#34;:{
-            &#34;News&#34;: {}, 
-            &#34;Docs&#34;:{
-                &#34;order&#34;: [&#34;quick start&#34;,&#34;structure&#34;,&#34;config&#34;,&#34;theme development&#34;,&#34;plugin development&#34;]
-            }, 
-            &#34;Themes&#34;:{}, 
-            &#34;Community&#34;:{}, 
-            &#34;github&#34;:{&#34;url&#34;:&#34;https://siteasy.github.io&#34;}
-    },
-}
-```
-Description:
-- The keys is the text of the categories.
-- If the value of the category is empty, then
-  - If there is a index.md under the category of articles, the index.html which generated from index.md will be put as the homepage of the category.
-  - If there is no index.md under the category of articles, the list.html which list all articles of the category will be put as the homepage of category.
-- If the value contains the key &#34;url&#34;, that means the category is a external link.
-- The value &#34;order&#34; of category control the order of articles under the category. The article list on the sider bar is shown by the plugin &#34;articel_list&#34;
-
-## plugins
-The plugins used for the website.
-demo:
-```json
-{
-    plugins: {
-        &#34;all_cates&#34;:[&#34;article_list&#34;],
-        &#34;index&#34;:[&#34;Jumbotron&#34;]
-    }
-}
-```
-description:
-- the keys describe which page is selected to apply the plugins
-- If the key is &#34;all_cates&#34;, all pages are selected to apply the plugins
-- If the key is &#34;index&#34;, only the index of the website is selected to apply the plugins
-- If the key is one of the categories, only the pages of the category are selected to apply the plugins.
-</div>
+    <!--    <div id="md" style="display:None;">&lt;h1&gt;config.json&lt;/h1&gt;
+&lt;p&gt;There is a config file under the root directory. It is the global setting of the site.&lt;/p&gt;
+&lt;h2&gt;articles_path&lt;/h2&gt;
+&lt;p&gt;Pointer to the folder where you put the article(md) files.&lt;br&gt;
+demo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;quot;articles_path&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;articles&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;theme&lt;/h2&gt;
+&lt;p&gt;Which theme you used.&lt;br&gt;
+demo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;quot;theme&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;default&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;index&lt;/h2&gt;
+&lt;p&gt;The context of index.&lt;br&gt;
+demo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;quot;index&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;logo&lt;/h2&gt;
+&lt;p&gt;The logo (brand) of the header.&lt;br&gt;
+demo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;quot;logo&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;siteasy&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;output&lt;/h2&gt;
+&lt;p&gt;Which folder to generate the static web site. 
+demo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;quot;output&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;will generate the site to the root directory.&lt;/p&gt;
+&lt;p&gt;The setting&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;quot;output&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;output&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;will make a folder &#34;output&#34; under root directory and generate the site to this &#34;output&#34; folder.&lt;/p&gt;
+&lt;h2&gt;footer&lt;/h2&gt;
+&lt;p&gt;The context of footer.&lt;br&gt;
+demo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;quot;footer&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Siteasy - Make static site generation life easy&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;add_date&lt;/h2&gt;
+&lt;p&gt;Whether to add crated datetime to the article. Todo.
+demo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;quot;add_date&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;cates&lt;/h2&gt;
+&lt;p&gt;The configuration of headers.&lt;br&gt;
+demo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;quot;cates&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:{&lt;/span&gt;
+            &lt;span class=&#34;nt&#34;&gt;&amp;quot;News&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{},&lt;/span&gt; 
+            &lt;span class=&#34;nt&#34;&gt;&amp;quot;Docs&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:{&lt;/span&gt;
+                &lt;span class=&#34;nt&#34;&gt;&amp;quot;order&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;quick start&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;structure&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;config&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;theme development&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;plugin development&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+            &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt; 
+            &lt;span class=&#34;nt&#34;&gt;&amp;quot;Themes&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:{},&lt;/span&gt; 
+            &lt;span class=&#34;nt&#34;&gt;&amp;quot;Community&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:{},&lt;/span&gt; 
+            &lt;span class=&#34;nt&#34;&gt;&amp;quot;github&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:{&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;quot;url&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;https://siteasy.github.io&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Description:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The keys is the text of the categories.&lt;/li&gt;
+&lt;li&gt;If the value of the category is empty, then&lt;ul&gt;
+&lt;li&gt;If there is a index.md under the category of articles, the index.html which generated from index.md will be put as the homepage of the category.&lt;/li&gt;
+&lt;li&gt;If there is no index.md under the category of articles, the list.html which list all articles of the category will be put as the homepage of category.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;If the value contains the key &#34;url&#34;, that means the category is a external link.&lt;/li&gt;
+&lt;li&gt;The value &#34;order&#34; of category control the order of articles under the category. The article list on the sider bar is shown by the plugin &#34;articel_list&#34;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;plugins&lt;/h2&gt;
+&lt;p&gt;The plugins used for the website.
+demo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;err&#34;&gt;plugins:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;nt&#34;&gt;&amp;quot;all_cates&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;article_list&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+        &lt;span class=&#34;nt&#34;&gt;&amp;quot;index&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Jumbotron&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;description:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the keys describe which page is selected to apply the plugins&lt;/li&gt;
+&lt;li&gt;If the key is &#34;all_cates&#34;, all pages are selected to apply the plugins&lt;/li&gt;
+&lt;li&gt;If the key is &#34;index&#34;, only the index of the website is selected to apply the plugins&lt;/li&gt;
+&lt;li&gt;If the key is one of the categories, only the pages of the category are selected to apply the plugins.&lt;/li&gt;
+&lt;/ul&gt;
+</div> -->
 
         
               </div>
@@ -179,6 +164,7 @@ description:
     <div class="Container">Siteasy - Make static site generation life easy</div>
 </div>
             <script>
+                /*
                 hljs.initHighlightingOnLoad();
                 marked.setOptions({
                   renderer: new marked.Renderer(),
@@ -194,6 +180,7 @@ description:
                   //},
                 });
                 document.getElementById('md_content').innerHTML = marked(document.getElementById('md').innerHTML);
+                */
             </script>
     </body>
 </html>
