@@ -1,2 +1,2 @@
-website of siteasy. Also an demo of siteasy.
+website of siteasy. Also a demo of siteasy.
 

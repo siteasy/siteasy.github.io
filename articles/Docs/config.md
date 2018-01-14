@@ -13,7 +13,7 @@ demo:
 ```
 
 ## theme
-Which theme you used.  
+Which theme you used. You can put serveral themes under theme folder and use this to choose.
 demo:
 ```json
 {"theme":"default"}
@@ -55,7 +55,9 @@ demo:
 ```
 
 ## add_date
-Whether to add crated datetime to the article. Todo.
+Whether to add crated datetime to the article.   
+> The index.md won't add date because usually the index page show the page which don't need date  
+
 demo:
 ```json
 {"add_date": false}
@@ -90,7 +92,7 @@ The plugins used for the website.
 demo:
 ```json
 {
-    plugins: {
+    "plugins": {
         "all_cates":["article_list"],
         "index":["Jumbotron"]
     }

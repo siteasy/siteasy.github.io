@@ -1,13 +1,12 @@
 <html>
     <head>
         <title>Siteasy config.json document</title>
-        <script src="https://cdn.bootcss.com/marked/0.3.6/marked.min.js"></script>
+        <!-- <script src="https://cdn.bootcss.com/marked/0.3.6/marked.min.js"></script> -->
         <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
         <link href="https://cdn.bootcss.com/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-        <script src="https://cdn.bootcss.com/highlight.js/9.12.0/languages/verilog.min.js"></script>
-        <link href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/default.min.css" rel="stylesheet">
+        <!-- <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script> -->
+        <!-- <script src="https://cdn.bootcss.com/highlight.js/9.12.0/languages/verilog.min.js"></script> -->
     </head>
 
     <body>
@@ -27,131 +26,185 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
         
-            <li><a href="/News/list.html">News</a></li>
+            <li><a href="/News">News</a></li>
         
-            <li><a href="/Docs/index.html">Docs</a></li>
+            <li><a href="/Docs/quick start.html">Docs</a></li>
         
-            <li><a href="/Themes/list.html">Themes</a></li>
+            <li><a href="/Themes">Themes</a></li>
         
-            <li><a href="/Community/list.html">Community</a></li>
+            <li><a href="https://gitq.com/siteasy/siteasy">Community</a></li>
         
-            <li><a href="https://siteasy.github.io">github</a></li>
+            <li><a href="https://github.com/siteasy/siteasy">github</a></li>
         
         </ul>
     </div>
   </div>
 </nav>        
     <div class="container" style="min-height:1200px;">
+                
+    
         
             <div class="row">
               <div class="col-xs-12 col-sm-6 col-md-8">
-        
-                
-    
-    <div id="md_content"></div>
-    <!--    <div id="md" style="display:None;">&lt;h1&gt;config.json&lt;/h1&gt;
-&lt;p&gt;There is a config file under the root directory. It is the global setting of the site.&lt;/p&gt;
-&lt;h2&gt;articles_path&lt;/h2&gt;
-&lt;p&gt;Pointer to the folder where you put the article(md) files.&lt;br&gt;
-demo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;quot;articles_path&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;articles&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;theme&lt;/h2&gt;
-&lt;p&gt;Which theme you used.&lt;br&gt;
-demo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;quot;theme&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;default&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;index&lt;/h2&gt;
-&lt;p&gt;The context of index.&lt;br&gt;
-demo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;quot;index&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;logo&lt;/h2&gt;
-&lt;p&gt;The logo (brand) of the header.&lt;br&gt;
-demo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;quot;logo&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;siteasy&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;output&lt;/h2&gt;
-&lt;p&gt;Which folder to generate the static web site. 
-demo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;quot;output&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;will generate the site to the root directory.&lt;/p&gt;
-&lt;p&gt;The setting&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;quot;output&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;output&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;will make a folder &#34;output&#34; under root directory and generate the site to this &#34;output&#34; folder.&lt;/p&gt;
-&lt;h2&gt;footer&lt;/h2&gt;
-&lt;p&gt;The context of footer.&lt;br&gt;
-demo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;quot;footer&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Siteasy - Make static site generation life easy&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;add_date&lt;/h2&gt;
-&lt;p&gt;Whether to add crated datetime to the article. Todo.
-demo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;quot;add_date&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;cates&lt;/h2&gt;
-&lt;p&gt;The configuration of headers.&lt;br&gt;
-demo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;quot;cates&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:{&lt;/span&gt;
-            &lt;span class=&#34;nt&#34;&gt;&amp;quot;News&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{},&lt;/span&gt; 
-            &lt;span class=&#34;nt&#34;&gt;&amp;quot;Docs&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:{&lt;/span&gt;
-                &lt;span class=&#34;nt&#34;&gt;&amp;quot;order&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;quick start&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;structure&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;config&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;theme development&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;plugin development&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
-            &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt; 
-            &lt;span class=&#34;nt&#34;&gt;&amp;quot;Themes&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:{},&lt;/span&gt; 
-            &lt;span class=&#34;nt&#34;&gt;&amp;quot;Community&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:{},&lt;/span&gt; 
-            &lt;span class=&#34;nt&#34;&gt;&amp;quot;github&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:{&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;quot;url&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;https://siteasy.github.io&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-    &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Description:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;The keys is the text of the categories.&lt;/li&gt;
-&lt;li&gt;If the value of the category is empty, then&lt;ul&gt;
-&lt;li&gt;If there is a index.md under the category of articles, the index.html which generated from index.md will be put as the homepage of the category.&lt;/li&gt;
-&lt;li&gt;If there is no index.md under the category of articles, the list.html which list all articles of the category will be put as the homepage of category.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;If the value contains the key &#34;url&#34;, that means the category is a external link.&lt;/li&gt;
-&lt;li&gt;The value &#34;order&#34; of category control the order of articles under the category. The article list on the sider bar is shown by the plugin &#34;articel_list&#34;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;plugins&lt;/h2&gt;
-&lt;p&gt;The plugins used for the website.
-demo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;err&#34;&gt;plugins:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;{&lt;/span&gt;
-        &lt;span class=&#34;nt&#34;&gt;&amp;quot;all_cates&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;article_list&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
-        &lt;span class=&#34;nt&#34;&gt;&amp;quot;index&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Jumbotron&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
-    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;err&#34;&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;description:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;the keys describe which page is selected to apply the plugins&lt;/li&gt;
-&lt;li&gt;If the key is &#34;all_cates&#34;, all pages are selected to apply the plugins&lt;/li&gt;
-&lt;li&gt;If the key is &#34;index&#34;, only the index of the website is selected to apply the plugins&lt;/li&gt;
-&lt;li&gt;If the key is one of the categories, only the pages of the category are selected to apply the plugins.&lt;/li&gt;
-&lt;/ul&gt;
-</div> -->
-
-        
+                 <div class="md_content"><h1>config.json</h1>
+<p>There is a config file under the root directory. It is the global setting of the site.</p>
+<h2>articles_path</h2>
+<p>Pointer to the folder where you put the article(md) files.<br>
+demo:</p>
+<div class="highlight-wrapper"><table class="highlighttable"><tr><td><div class="linenodiv" style="background-color: #f0f0f0; padding-right: 10px"><pre style="line-height: 125%">1</pre></div></td><td class="code"><div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>{<span style="color: #008000; font-weight: bold">&quot;articles_path&quot;</span>:<span style="color: #BA2121">&quot;articles&quot;</span>}
+</pre></div>
+</td></tr></table></div>
+<h2>theme</h2>
+<p>Which theme you used. You can put serveral themes under theme folder and use this to choose.
+demo:</p>
+<div class="highlight-wrapper"><table class="highlighttable"><tr><td><div class="linenodiv" style="background-color: #f0f0f0; padding-right: 10px"><pre style="line-height: 125%">1</pre></div></td><td class="code"><div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>{<span style="color: #008000; font-weight: bold">&quot;theme&quot;</span>:<span style="color: #BA2121">&quot;default&quot;</span>}
+</pre></div>
+</td></tr></table></div>
+<h2>index</h2>
+<p>The context of index.<br>
+demo:</p>
+<div class="highlight-wrapper"><table class="highlighttable"><tr><td><div class="linenodiv" style="background-color: #f0f0f0; padding-right: 10px"><pre style="line-height: 125%">1</pre></div></td><td class="code"><div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>{<span style="color: #008000; font-weight: bold">&quot;index&quot;</span>:<span style="color: #BA2121">&quot;&quot;</span>}
+</pre></div>
+</td></tr></table></div>
+<h2>logo</h2>
+<p>The logo (brand) of the header.<br>
+demo:</p>
+<div class="highlight-wrapper"><table class="highlighttable"><tr><td><div class="linenodiv" style="background-color: #f0f0f0; padding-right: 10px"><pre style="line-height: 125%">1</pre></div></td><td class="code"><div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>{<span style="color: #008000; font-weight: bold">&quot;logo&quot;</span>:<span style="color: #BA2121">&quot;siteasy&quot;</span>}
+</pre></div>
+</td></tr></table></div>
+<h2>output</h2>
+<p>Which folder to generate the static web site. 
+demo:</p>
+<div class="highlight-wrapper"><table class="highlighttable"><tr><td><div class="linenodiv" style="background-color: #f0f0f0; padding-right: 10px"><pre style="line-height: 125%">1</pre></div></td><td class="code"><div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>{<span style="color: #008000; font-weight: bold">&quot;output&quot;</span>:<span style="color: #BA2121">&quot;&quot;</span>}
+</pre></div>
+</td></tr></table></div>
+<p>will generate the site to the root directory.</p>
+<p>The setting</p>
+<div class="highlight-wrapper"><table class="highlighttable"><tr><td><div class="linenodiv" style="background-color: #f0f0f0; padding-right: 10px"><pre style="line-height: 125%">1</pre></div></td><td class="code"><div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>{<span style="color: #008000; font-weight: bold">&quot;output&quot;</span>:<span style="color: #BA2121">&quot;output&quot;</span>}
+</pre></div>
+</td></tr></table></div>
+<p>will make a folder "output" under root directory and generate the site to this "output" folder.</p>
+<h2>footer</h2>
+<p>The context of footer.<br>
+demo:</p>
+<div class="highlight-wrapper"><table class="highlighttable"><tr><td><div class="linenodiv" style="background-color: #f0f0f0; padding-right: 10px"><pre style="line-height: 125%">1</pre></div></td><td class="code"><div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>{<span style="color: #008000; font-weight: bold">&quot;footer&quot;</span>:<span style="color: #BA2121">&quot;Siteasy - Make static site generation life easy&quot;</span>}
+</pre></div>
+</td></tr></table></div>
+<h2>add_date</h2>
+<p>Whether to add crated datetime to the article.</p>
+<blockquote><p>The index.md won't add date because usually the index page show the page which don't need date</p>
+</blockquote>
+<p>demo:</p>
+<div class="highlight-wrapper"><table class="highlighttable"><tr><td><div class="linenodiv" style="background-color: #f0f0f0; padding-right: 10px"><pre style="line-height: 125%">1</pre></div></td><td class="code"><div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>{<span style="color: #008000; font-weight: bold">&quot;add_date&quot;</span>: <span style="color: #008000; font-weight: bold">false</span>}
+</pre></div>
+</td></tr></table></div>
+<h2>cates</h2>
+<p>The configuration of headers.<br>
+demo:</p>
+<div class="highlight-wrapper"><table class="highlighttable"><tr><td><div class="linenodiv" style="background-color: #f0f0f0; padding-right: 10px"><pre style="line-height: 125%"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>{
+    <span style="color: #008000; font-weight: bold">&quot;cates&quot;</span>:{
+            <span style="color: #008000; font-weight: bold">&quot;News&quot;</span>: {}, 
+            <span style="color: #008000; font-weight: bold">&quot;Docs&quot;</span>:{
+                <span style="color: #008000; font-weight: bold">&quot;order&quot;</span>: [<span style="color: #BA2121">&quot;quick start&quot;</span>,<span style="color: #BA2121">&quot;structure&quot;</span>,<span style="color: #BA2121">&quot;config&quot;</span>,<span style="color: #BA2121">&quot;theme development&quot;</span>,<span style="color: #BA2121">&quot;plugin development&quot;</span>]
+            }, 
+            <span style="color: #008000; font-weight: bold">&quot;Themes&quot;</span>:{}, 
+            <span style="color: #008000; font-weight: bold">&quot;Community&quot;</span>:{}, 
+            <span style="color: #008000; font-weight: bold">&quot;github&quot;</span>:{<span style="color: #008000; font-weight: bold">&quot;url&quot;</span>:<span style="color: #BA2121">&quot;https://siteasy.github.io&quot;</span>}
+    },
+}
+</pre></div>
+</td></tr></table></div>
+<p>Description:</p>
+<ul>
+<li>The keys is the text of the categories.</li>
+<li>If the value of the category is empty, then<ul>
+<li>If there is a index.md under the category of articles, the index.html which generated from index.md will be put as the homepage of the category.</li>
+<li>If there is no index.md under the category of articles, the list.html which list all articles of the category will be put as the homepage of category.</li>
+</ul>
+</li>
+<li>If the value contains the key "url", that means the category is a external link.</li>
+<li>The value "order" of category control the order of articles under the category. The article list on the sider bar is shown by the plugin "articel_list"</li>
+</ul>
+<h2>plugins</h2>
+<p>The plugins used for the website.
+demo:</p>
+<div class="highlight-wrapper"><table class="highlighttable"><tr><td><div class="linenodiv" style="background-color: #f0f0f0; padding-right: 10px"><pre style="line-height: 125%">1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>{
+    <span style="color: #008000; font-weight: bold">&quot;plugins&quot;</span>: {
+        <span style="color: #008000; font-weight: bold">&quot;all_cates&quot;</span>:[<span style="color: #BA2121">&quot;article_list&quot;</span>],
+        <span style="color: #008000; font-weight: bold">&quot;index&quot;</span>:[<span style="color: #BA2121">&quot;Jumbotron&quot;</span>]
+    }
+}
+</pre></div>
+</td></tr></table></div>
+<p>description:</p>
+<ul>
+<li>the keys describe which page is selected to apply the plugins</li>
+<li>If the key is "all_cates", all pages are selected to apply the plugins</li>
+<li>If the key is "index", only the index of the website is selected to apply the plugins</li>
+<li>If the key is one of the categories, only the pages of the category are selected to apply the plugins.</li>
+</ul>
+<hr>
+<p>2017-08-24 00:00:00</p>
+</div>
               </div>
               <div class="col-xs-6 col-md-4">
                 
     
-    <ul class="list-group">
+    <ul class="">
   
-    <li><a href="/Docs/Quick start.html">Quick start</a></li>
+    
+        <li><a href="/Docs/quick start.html">quick start</a></li>
+    
   
-    <li><a href="/Docs/Structure.html">Structure</a></li>
+    
+        <li><a href="/Docs/structure.html">structure</a></li>
+    
   
-    <li><a href="/Docs/config.html">config</a></li>
+    
+        <li><a href="/Docs/config.html">config</a></li>
+    
   
-    <li><a href="/Docs/Theme development.html">Theme development</a></li>
+    
+        <li>theme development</li>
+        <ul class="">
+            
+                <li><a href="/Docs/theme development/Theme development.html">Theme development</a></li>
+            
+        </ul>
+    
   
-    <li><a href="/Docs/Plugin development.html">Plugin development</a></li>
+    
+        <li>plugin development</li>
+        <ul class="">
+            
+                <li><a href="/Docs/plugin development/Plugin development.html">Plugin development</a></li>
+            
+        </ul>
+    
+  
+    
+        <li>contribute</li>
+        <ul class="">
+            
+                <li><a href="/Docs/contribute/Contribute.html">Contribute</a></li>
+            
+        </ul>
+    
   
 </ul>
     
@@ -159,28 +212,10 @@ demo:&lt;/p&gt;
               </div>
             </div>
         
+
     </div>
     <div style="margin-top:50px;">
     <div class="Container">Siteasy - Make static site generation life easy</div>
 </div>
-            <script>
-                /*
-                hljs.initHighlightingOnLoad();
-                marked.setOptions({
-                  renderer: new marked.Renderer(),
-                  gfm: true,
-                  tables: true,
-                  breaks: false,
-                  pedantic: false,
-                  sanitize: false,
-                  smartLists: true,
-                  smartypants: false,
-                  //highlight: function (code) {
-                  //    return hljs.highlightAuto(code).value;
-                  //},
-                });
-                document.getElementById('md_content').innerHTML = marked(document.getElementById('md').innerHTML);
-                */
-            </script>
     </body>
 </html>
