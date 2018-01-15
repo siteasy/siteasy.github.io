@@ -1,0 +1,3 @@
+import siteasy
+
+siteasy.run()

@@ -1,0 +1,3 @@
+[submodule "siteasy"]
+	path = siteasy
+	url = https://github.com/siteasy/siteasy.git
